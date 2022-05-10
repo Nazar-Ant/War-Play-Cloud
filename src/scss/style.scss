@@ -1,0 +1,14 @@
+@import url("//db.onlinewebfonts.com/c/a52dd81eed59f38717c2e681311adfb2?family=Aire+Exterior");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+@import "./base/zeroing.scss";
+@import "./base/vars.scss";
+
+@import "./blocks/title.scss";
+
+@import "./blocks/promo.scss";

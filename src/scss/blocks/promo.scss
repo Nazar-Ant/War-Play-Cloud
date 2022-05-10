@@ -1,0 +1,75 @@
+.promo {
+  width: 1330px;
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background: url("../img/promo/slide_1.jpg") center / cover no-repeat;
+  border: 1px solid var(--blue);
+  box-shadow: -33px 17px 29px rgba(0, 0, 0, 0.25);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: background-image 1s;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background: rgba(9, 189, 242, 0.6);
+    filter: blur(45px);
+    border-radius: 24px;
+  }
+
+  &__title,
+  &__pretitle {
+    color: var(--white);
+  }
+
+  &__pretitle {
+    font-weight: 500;
+    line-height: 125%;
+  }
+
+  &__title {
+    font-size: 3em;
+  }
+
+  &__upgrade {
+    width: 250px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Aire Exterior";
+    font-size: 1.5em;
+    color: var(--black);
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: var(--white);
+    clip-path: polygon(90% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
+    transition: clip-path 0.2s;
+
+    &:hover {
+      clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .promo {
+    width: auto;
+    align-items: flex-start;
+    padding: 0 28px;
+
+    &__title {
+      font-size: 42px;
+    }
+  }
+}

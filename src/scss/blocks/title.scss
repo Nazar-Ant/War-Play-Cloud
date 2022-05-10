@@ -1,0 +1,33 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+  }
+
+  &__line {
+    width: 50px;
+    height: 1px;
+    background-color: var(--blue);
+  }
+
+  &__pretext {
+    color: var(--blue);
+    line-height: 180%;
+    font-weight: 300;
+  }
+
+  &__text {
+    font-family: "Aire Exterior";
+    font-weight: 400;
+    font-size: 40px;
+    color: #ffffff;
+  }
+}
