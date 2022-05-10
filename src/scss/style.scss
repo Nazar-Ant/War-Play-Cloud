@@ -6,9 +6,15 @@
   font-weight: 400;
 }
 
+.container {
+  max-width: 1330px;
+  margin: 0 auto;
+}
+
 @import "./base/zeroing.scss";
 @import "./base/vars.scss";
 
 @import "./blocks/title.scss";
 
 @import "./blocks/promo.scss";
+@import "./blocks/about.scss";

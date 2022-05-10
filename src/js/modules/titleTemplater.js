@@ -4,6 +4,11 @@ function titleTemplater() {
   titles.forEach((title) => {
     title.classList.add("title");
 
+    if (title.dataset.titleStart) {
+      title.style.alignItems = "flex-start";
+      title.removeAttribute("data-title-start");
+    }
+
     title.innerHTML = `<div class="title__header"><div class="title__line"></div><h3 class="title__pretext">${title.dataset.titlePretext}</h3></div><h2 class="title__text">${title.dataset.titleText}</h2>`;
 
     title.removeAttribute("data-title");
