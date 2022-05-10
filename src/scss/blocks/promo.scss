@@ -1,5 +1,5 @@
 .promo {
-  width: 1330px;
+  max-width: 1330px;
   height: 780px;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,6 @@
     font-family: "Aire Exterior";
     font-size: 1.5em;
     color: var(--black);
-    margin: 0 auto;
     margin-top: 100px;
     background-color: var(--white);
     clip-path: polygon(90% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
