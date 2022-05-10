@@ -11,8 +11,31 @@
   margin: 0 auto;
 }
 
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+
+  &.visible {
+    display: initial;
+  }
+}
+
+i {
+  color: var(--blue);
+
+  &::before {
+    font-size: inherit;
+  }
+}
+
 @import "./base/zeroing.scss";
 @import "./base/vars.scss";
+
+@import "./blocks/header.scss";
 
 @import "./blocks/title.scss";
 

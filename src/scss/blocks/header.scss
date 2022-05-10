@@ -1,0 +1,150 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  background-color: var(--app-bgc);
+  padding: 48px 110px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  transition: transform 0.2s;
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  &__logo {
+    width: 180px;
+    color: var(--blue);
+  }
+
+  &__content {
+    img {
+      display: none;
+    }
+  }
+
+  &__socials {
+    display: none;
+  }
+
+  &__close {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    a {
+      line-height: 180%;
+      color: #ffffff;
+      border-bottom: 1px solid;
+      border-bottom-color: transparent;
+      transition: border-bottom-color 0.2s;
+
+      &.active,
+      &:hover {
+        border-bottom-color: var(--blue);
+      }
+    }
+  }
+
+  &__collapse {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    gap: unset;
+    background-color: transparent;
+    padding: 40px 50px;
+
+    &__logo {
+      color: var(--white);
+    }
+
+    &__content {
+      width: 40%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 5;
+      background-color: var(--app-bgc);
+      padding: 40px 70px;
+      transform: translateX(100%);
+      transition: transform 0.3s;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      img {
+        width: 180px;
+        height: 26px;
+        display: initial;
+        margin-bottom: 108px;
+      }
+    }
+
+    &__socials,
+    &__close {
+      display: initial;
+
+      i {
+        color: var(--white);
+      }
+    }
+
+    &__socials {
+      margin: 140px 0 20px;
+    }
+
+    nav {
+      width: 100%;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__collapse {
+      display: initial;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 52px;
+        height: 5px;
+        background-color: var(--white);
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header__content {
+    width: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .header__content {
+    width: 100%;
+  }
+}
