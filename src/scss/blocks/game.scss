@@ -1,0 +1,53 @@
+.game {
+  height: 740px;
+  margin-top: 240px;
+  background: url("../img/gaming_preview.png") 100% -15px / auto auto no-repeat;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    padding-left: 30px;
+
+    p {
+      font-weight: 300;
+      font-size: 21px;
+      line-height: 150%;
+      color: var(--grey);
+    }
+
+    a {
+      font-weight: 500;
+      line-height: 120%;
+      color: var(--blue);
+      border-bottom: 1px solid var(--blue);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .game {
+    margin-top: 90px;
+    background-position: 100% 50px;
+    background-size: auto 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .game {
+    height: 600px;
+    background-position: 100% 30%;
+    background-size: auto 50%;
+
+    &__content {
+      gap: 20px;
+      padding: 0 15px;
+
+      p {
+        margin-top: 260px;
+      }
+    }
+  }
+}

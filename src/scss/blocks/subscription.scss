@@ -1,0 +1,143 @@
+.subscription {
+  margin-top: 160px;
+
+  &__wrapper {
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 30px;
+  }
+
+  &__item {
+    min-width: 240px;
+    width: 400px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--dark);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 40px;
+
+    &:nth-child(2) {
+      background-color: var(--blue);
+      color: var(--dark);
+
+      h3,
+      div,
+      p {
+        color: inherit;
+      }
+
+      button {
+        color: var(--white);
+        background-color: var(--dark);
+      }
+    }
+  }
+
+  &__title,
+  &__price {
+    color: var(--white);
+    line-height: 120%;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  &__descr {
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 150%;
+    color: var(--grey);
+  }
+
+  &__buy {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    border-radius: 5px;
+    font-weight: 400;
+    font-family: "Aire Exterior", sans-serif;
+    font-size: 24px;
+    color: var(--dark);
+  }
+
+  hr {
+    width: 580px;
+    height: 1px;
+    background-color: var(--blue);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .subscription {
+    margin-top: 90px;
+
+    &__wrapper {
+      margin: 60px 0;
+    }
+
+    &__item {
+      height: 400px;
+      padding: 20px;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__price {
+      font-size: 20px;
+    }
+
+    &__descr {
+      font-size: 1em;
+    }
+
+    &__buy {
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .subscription {
+    &__wrapper {
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 15px;
+    }
+
+    &__item {
+      width: 300px;
+    }
+
+    hr {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .subscription {
+    &__item {
+      width: 100%;
+    }
+  }
+}

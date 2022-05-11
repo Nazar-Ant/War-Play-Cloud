@@ -82,6 +82,16 @@
         right: 50%;
       }
 
+      &:nth-child(3) {
+        grid-row: 2;
+        grid-column: 2;
+
+        &::before {
+          right: unset;
+          left: -20px;
+        }
+      }
+
       p {
         font-size: 1.125em;
       }
