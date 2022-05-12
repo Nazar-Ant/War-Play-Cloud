@@ -1,0 +1,92 @@
+.footer {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px;
+  background-color: #171717;
+
+  &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__logo {
+    width: 210px;
+    color: var(--white);
+  }
+
+  &__rights,
+  &__creators > p {
+    font-family: "Aire Exterior", sans-serif;
+    font-weight: 400;
+  }
+
+  &__rights {
+    color: var(--white);
+  }
+
+  &__creators {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    color: #838383;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    a {
+      font-weight: 200;
+      font-size: 12px;
+      color: #ffffff;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    i {
+      color: var(--grey);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    gap: 50px;
+
+    &__main {
+      flex-direction: column;
+    }
+
+    &__creators {
+      flex-direction: row;
+    }
+
+    &__links {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

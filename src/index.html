@@ -96,13 +96,11 @@
         <img src="img/logo.svg" alt="WARPLAY.CLOUD" />
 
         <nav>
-          <a href="#">Главная</a>
-          <a href="#">Сервера</a>
-          <a href="#">Скачать</a>
-          <a href="#">Открыть&nbsp;в&nbsp;браузере</a>
-          <a href="#">Цены</a>
-          <a href="#">Тех.&nbsp;поддержка</a>
-          <a href="#">Контакты</a>
+          <a href="#promo">Главная</a>
+          <a href="#servers">Сервера</a>
+          <a href="#download">Скачать</a>
+          <a href="#browser">Открыть&nbsp;в&nbsp;браузере</a>
+          <a href="#prices">Цены</a>
         </nav>
 
         <div class="header__socials">
@@ -120,14 +118,14 @@
     </header>
 
     <main>
-      <sectiion class="promo">
+      <sectiion id="promo" class="promo">
         <h2 class="promo__pretitle">Сервис облачного гейминга</h2>
         <h1 class="promo__title">Преврати свое устройство в игровое</h1>
 
-        <button class="promo__upgrade">Upgrade</button>
+        <button class="promo__upgrade clip">Upgrade</button>
       </sectiion>
 
-      <section class="about">
+      <section id="about" class="about">
         <div class="container">
           <div class="about__content">
             <div class="about__image">
@@ -174,13 +172,13 @@
                 операционых системах<br />Windows 7, 8, 10 MacOS и Linux .
               </p>
 
-              <a href="./img/about/server.png" download>Загрузить</a>
+              <button class="open-modal" data-modal="system">Загрузить</button>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="get-started">
+      <section id="download" class="get-started">
         <div class="container">
           <div
             data-title
@@ -210,11 +208,13 @@
             </div>
           </div>
 
-          <button class="get-started__start">Начать</button>
+          <button class="get-started__start open-modal" data-modal="entrance">
+            Начать
+          </button>
         </div>
       </section>
 
-      <section class="subscription">
+      <section id="prices" class="subscription">
         <div class="container">
           <div
             data-title
@@ -234,7 +234,9 @@
                 Игровая сессия 4 часа/день
               </p>
 
-              <button class="subscription__buy">Выбрать</button>
+              <button class="subscription__buy" data-modal="subscription">
+                Выбрать
+              </button>
             </div>
 
             <div class="subscription__item">
@@ -249,7 +251,9 @@
                 Безлимитная игровая сессия
               </p>
 
-              <button class="subscription__buy">Выбрать</button>
+              <button class="subscription__buy" data-modal="subscription">
+                Выбрать
+              </button>
             </div>
 
             <div class="subscription__item">
@@ -264,7 +268,9 @@
                 Игровая сессия 10 часов/день
               </p>
 
-              <button class="subscription__buy">Выбрать</button>
+              <button class="subscription__buy" data-modal="subscription">
+                Выбрать
+              </button>
             </div>
           </div>
 
@@ -272,7 +278,7 @@
         </div>
       </section>
 
-      <section class="game">
+      <section id="browser" class="game">
         <div class="container">
           <div class="game__content">
             <div
@@ -287,12 +293,14 @@
               компьютерах.
             </p>
 
-            <a href="http://">Открыть в браузере</a>
+            <button class="open-modal" data-modal="system">
+              Открыть в браузере
+            </button>
           </div>
         </div>
       </section>
 
-      <section class="map">
+      <section id="servers" class="map">
         <div
           data-title
           data-title-pretext="Игровые сервера на карте"
@@ -305,8 +313,191 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__logo">
+          <img src="img/logo.svg" alt="WARPLAY.CLOUD" />
+        </div>
 
-    <div class="overlay"></div>
+        <div class="footer__rights">@2022 All rights reserved</div>
+
+        <div class="footer__creators">
+          <p>Design by me</p>
+          <p>Programing by me</p>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Файлы Coocie</a>
+
+        <div class="footer__socials">
+          <a href="https://web.telegram.org/" target="_blank"
+            ><i class="ri-telegram-fill"></i
+          ></a>
+          <a href="https://discord.com/" target="_blank"
+            ><i class="ri-discord-fill"></i
+          ></a>
+          <a href="https://www.youtube.com/" target="_blank"
+            ><i class="ri-youtube-fill"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="entrance" class="modal entrance">
+      <div class="entrance__content">
+        <div class="modal__header">
+          <button class="modal__close">
+            <i class="ri-arrow-left-s-line ri-3x"></i>
+          </button>
+
+          <div class="entrance__tabs">
+            <button class="entrance__tab">Реєстрація</button>
+            <button class="entrance__tab">Вхід</button>
+          </div>
+        </div>
+
+        <form class="entrance__form entrance__sign-up">
+          <input
+            type="text"
+            name="email"
+            placeholder="Пошта"
+            class="entrance__input"
+          />
+          <input
+            type="text"
+            name="password"
+            placeholder="Пароль"
+            class="entrance__input"
+          />
+
+          <div class="entrance__footer">
+            <button class="entrance__submit clip">Зареєструватися</button>
+
+            <label>
+              <input type="checkbox" class="entrance__agree" />
+              Я згоден із правилами користування сервісом WARPLAY.CLOUD
+            </label>
+          </div>
+        </form>
+
+        <form class="entrance__form entrance__sign-in">
+          <input
+            type="text"
+            name="email"
+            placeholder="Пошта"
+            class="entrance__input"
+          />
+          <input
+            type="text"
+            name="password"
+            placeholder="Пароль"
+            class="entrance__input"
+          />
+
+          <div class="entrance__footer">
+            <label>
+              <input type="checkbox" class="entrance__agree" />
+              Запам'ятати
+            </label>
+
+            <button class="entrance__submit clip">Увійти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="verify" class="modal verify">
+      <div class="verify__content">
+        <div class="modal__header">
+          <button class="modal__close">
+            <i class="ri-arrow-left-s-line ri-3x"></i>
+          </button>
+
+          <div class="modal__title">Підтвердіть Вашу пошту</div>
+        </div>
+
+        <div class="verify__text">
+          <p>
+            На Вашу поштову скриньку надіслано повідомлення, яке містить
+            посилання для підтвердження правильності e-mail адреси. Будь ласка,
+            перейдіть за посиланням для завершення підписки.
+          </p>
+
+          <p>
+            Якщо лист не надійшов протягом 15 хвилин, перевірте папку «Спам».
+            Якщо лист раптом потрапив до цієї папки, відкрийте лист, натисніть
+            кнопку «Не спам» і перейдіть за посиланням підтвердження. Якщо листа
+            немає і в папці «Спам», спробуйте підписатися ще раз. Можливо, ви
+            ввели адресу.
+          </p>
+
+          <button class="verify__continue">Продовжити</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="subscription" class="modal plan">
+      <div class="plan__content">
+        <div class="modal__header">
+          <button class="modal__close">
+            <i class="ri-arrow-left-s-line ri-3x"></i>
+          </button>
+
+          <div class="modal__title">Доступні підписки</div>
+        </div>
+
+        <div class="plan__choice">
+          <div class="plan__item">
+            <div class="plan__name">Погодинна<br />оплата</div>
+
+            <button class="plan__choose">Обрати</button>
+          </div>
+
+          <div class="plan__item">
+            <div class="plan__name">Підписка<br />максимум</div>
+
+            <button class="plan__choose">Обрати</button>
+          </div>
+
+          <div class="plan__item">
+            <div class="plan__name">Підписка<br />мінімум</div>
+
+            <button class="plan__choose">Обрати</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="system" class="modal system">
+      <div class="system__content">
+        <div class="modal__header">
+          <button class="modal__close">
+            <i class="ri-arrow-left-s-line ri-3x"></i>
+          </button>
+
+          <div class="modal__title">Оберіть систему</div>
+        </div>
+
+        <div class="system__wrapper">
+          <button>
+            <i class="ri-windows-fill ri-5x"></i>
+          </button>
+
+          <button>
+            <i class="ri-apple-fill ri-5x"></i>
+          </button>
+
+          <button>
+            <i class="ri-ubuntu-fill ri-5x"></i>
+          </button>
+
+          <button>
+            <i class="ri-chrome-fill ri-5x"></i>
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -76,6 +76,7 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-items: center;
       position: absolute;
       top: 0;
@@ -94,7 +95,6 @@
         width: 180px;
         height: 26px;
         display: initial;
-        margin-bottom: 108px;
       }
     }
 
@@ -107,14 +107,10 @@
       }
     }
 
-    &__socials {
-      margin: 140px 0 20px;
-    }
-
     nav {
       width: 100%;
       flex-direction: column;
-      gap: 30px;
+      gap: 20px;
     }
 
     &__collapse {

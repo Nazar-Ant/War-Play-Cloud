@@ -32,5 +32,5 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  box-shadow: 0 0 0 2px #fff;
+  box-shadow: 0 0 0 2px var(--black), 0 0 0 4px var(--white);
 }

@@ -1,0 +1,90 @@
+.plan {
+  &__content {
+    max-width: 1220px;
+    margin: 0 20px;
+  }
+
+  &__choice {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    margin-top: 20px;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--dark);
+
+    &:nth-child(2) {
+      background-color: var(--blue);
+
+      div {
+        color: var(--app-bgc);
+      }
+
+      button {
+        background-color: var(--app-bgc);
+        color: var(--white);
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 120%;
+    color: var(--white);
+  }
+
+  &__choose {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Aire Exterior", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 180%;
+    color: var(--app-bgc);
+    border-radius: 5px;
+    background-color: var(--blue);
+  }
+}
+
+@media (max-width: 1230px) {
+  .plan {
+    &__content {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .plan {
+    &__choice {
+      grid-template-columns: 400px;
+      grid-template-rows: repeat(3, 1fr);
+      justify-content: center;
+      grid-gap: 10px;
+    }
+
+    &__item {
+      padding: 10px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .plan {
+    &__choice {
+      grid-template-columns: 100%;
+    }
+  }
+}

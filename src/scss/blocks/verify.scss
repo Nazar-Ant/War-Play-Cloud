@@ -1,0 +1,45 @@
+.verify {
+  &__content {
+    width: 800px;
+  }
+
+  .modal__header {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 60px;
+
+    p {
+      font-weight: 300;
+      line-height: 180%;
+      color: var(--grey);
+    }
+  }
+
+  &__continue {
+    color: var(--blue);
+    font-weight: 500;
+    border-bottom: 1px solid var(--blue);
+    padding-bottom: 6px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .verify {
+    &__content {
+      width: 100%;
+      padding: 0 30px;
+    }
+
+    &__text {
+      margin-top: 40px;
+    }
+  }
+}

@@ -3,15 +3,17 @@ function hideHeaderOnScrollDown() {
   let scrollPrev = 0;
 
   window.addEventListener("scroll", () => {
-    const scrolled = window.pageYOffset;
+    if (window.innerWidth > 1000) {
+      const scrolled = window.pageYOffset;
 
-    if (scrolled && scrolled > scrollPrev) {
-      header.classList.add("hide");
-    } else {
-      header.classList.remove("hide");
+      if (scrolled && scrolled > scrollPrev) {
+        header.classList.add("hide");
+      } else {
+        header.classList.remove("hide");
+      }
+
+      scrollPrev = scrolled;
     }
-
-    scrollPrev = scrolled;
   });
 }
 
