@@ -1,30 +1,49 @@
 {
   "name": "warplaycloud",
-  "author": "Nazar Antoniuk https://github.com/Nazar-Ant",
+  "version": "1.0.0",
+  "description": "A company that provides servers for cloud gaming",
+  "main": "script.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nazar-Ant/WarPlayCloud.git"
+    "url": "git+https://github.com/Nazar-Ant/War-Play-Cloud.git"
   },
-  "scripts": {
-    "build": "SET NODE_ENV='production' && webpack",
-    "dev": "webpack-dev-server"
+  "author": "Nazar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nazar-Ant/War-Play-Cloud/issues"
   },
+  "homepage": "https://github.com/Nazar-Ant/War-Play-Cloud#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
     "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.4",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "imagemin-webpack-plugin": "^2.4.2",
+    "image-minimizer-webpack-plugin": "^3.2.3",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "mini-css-extract-plugin": "^2.6.0",
     "node-sass": "^7.0.1",
-    "postcss": "^8.4.13",
-    "postcss-loader": "^6.2.1",
     "sass-loader": "^12.6.0",
-    "sass-webpack-plugin": "^1.0.3",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.72.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
-    "remixicon": "^2.5.0"
+    "@babel/polyfill": "^7.12.1"
   }
 }

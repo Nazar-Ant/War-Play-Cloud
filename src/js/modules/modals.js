@@ -5,8 +5,6 @@ function modals() {
     const modal = document.getElementById(trigger.dataset.modal);
     const close = modal.querySelector(".modal__close");
 
-    console.log(modal, close);
-
     trigger.addEventListener("click", () => {
       modal.classList.add("open");
       document.body.style.overflow = "hidden";

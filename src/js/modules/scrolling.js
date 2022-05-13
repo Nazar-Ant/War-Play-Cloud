@@ -2,8 +2,6 @@ function scrolling() {
   let links = document.querySelectorAll('a[href^="#"]'),
     speed = 0.1;
 
-  console.log(links);
-
   links.forEach((link) => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
